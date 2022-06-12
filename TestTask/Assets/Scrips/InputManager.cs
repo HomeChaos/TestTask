@@ -7,13 +7,6 @@ namespace Scrips
     {
         [SerializeField] private PlayerController _playerController;
 
-        private PlayerInput _playerInput;
-
-        private void Awake()
-        {
-            //_playerInput = new PlayerInput();
-        }
-
         public void OnPrimaryContact(InputAction.CallbackContext context)
         {
             if (context.performed)
@@ -27,7 +20,6 @@ namespace Scrips
                 _playerController.SwipeCheck(false);
                 //Debug.Log($"context.canceled: {context.canceled}");
             }
-                
         }
 
         public void OnVector(InputAction.CallbackContext context)
