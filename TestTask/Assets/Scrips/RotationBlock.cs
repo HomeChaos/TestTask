@@ -11,13 +11,11 @@ namespace Scrips
         private Quaternion _down = Quaternion.Euler(0, 0, 0);
 
         private Quaternion _end;
-        private bool _OnRotate = false;
 
         private void Start()
         {
             _start = transform.rotation;
             _end = transform.rotation;
-
         }
 
         private void Update()

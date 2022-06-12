@@ -40,26 +40,22 @@ namespace Scrips
         {
             if (Vector2.Dot(Vector2.up, direction) > _directionThreshold)
             {
-                Debug.Log("Swipe Up");
                 Physics2D.gravity = new Vector3(0, _defaultGravity, 0);
             }
 
             if (Vector2.Dot(Vector2.down, direction) > _directionThreshold)
             {
                 Physics2D.gravity = new Vector3(0, -_defaultGravity, 0);
-                Debug.Log("Swipe Down");
             }
 
             if (Vector2.Dot(Vector2.left, direction) > _directionThreshold)
             {
                 Physics2D.gravity = new Vector3(-_defaultGravity, 0f, 0);
-                Debug.Log("Swipe Left");
             }
 
             if (Vector2.Dot(Vector2.right, direction) > _directionThreshold)
             {
                 Physics2D.gravity = new Vector3(_defaultGravity, 0, 0);
-                Debug.Log("Swipe Right");
             }
                 
         }
